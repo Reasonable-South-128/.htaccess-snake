@@ -1,0 +1,162 @@
+Options -MultiViews
+RewriteEngine On
+
+RewriteRule ^$ %{REQUEST_URI}s/MLK/T [R=302,END]
+
+RewriteRule ^move/up/F([A-Y]*)/([A-Y])$ check/A/F$1/$2 [DPI,N]
+RewriteRule ^move/up/G([A-Y]*)/([A-Y])$ check/B/G$1/$2 [DPI,N]
+RewriteRule ^move/up/H([A-Y]*)/([A-Y])$ check/C/H$1/$2 [DPI,N]
+RewriteRule ^move/up/I([A-Y]*)/([A-Y])$ check/D/I$1/$2 [DPI,N]
+RewriteRule ^move/up/J([A-Y]*)/([A-Y])$ check/E/J$1/$2 [DPI,N]
+RewriteRule ^move/up/K([A-Y]*)/([A-Y])$ check/F/K$1/$2 [DPI,N]
+RewriteRule ^move/up/L([A-Y]*)/([A-Y])$ check/G/L$1/$2 [DPI,N]
+RewriteRule ^move/up/M([A-Y]*)/([A-Y])$ check/H/M$1/$2 [DPI,N]
+RewriteRule ^move/up/N([A-Y]*)/([A-Y])$ check/I/N$1/$2 [DPI,N]
+RewriteRule ^move/up/O([A-Y]*)/([A-Y])$ check/J/O$1/$2 [DPI,N]
+RewriteRule ^move/up/P([A-Y]*)/([A-Y])$ check/K/P$1/$2 [DPI,N]
+RewriteRule ^move/up/Q([A-Y]*)/([A-Y])$ check/L/Q$1/$2 [DPI,N]
+RewriteRule ^move/up/R([A-Y]*)/([A-Y])$ check/M/R$1/$2 [DPI,N]
+RewriteRule ^move/up/S([A-Y]*)/([A-Y])$ check/N/S$1/$2 [DPI,N]
+RewriteRule ^move/up/T([A-Y]*)/([A-Y])$ check/O/T$1/$2 [DPI,N]
+RewriteRule ^move/up/U([A-Y]*)/([A-Y])$ check/P/U$1/$2 [DPI,N]
+RewriteRule ^move/up/V([A-Y]*)/([A-Y])$ check/Q/V$1/$2 [DPI,N]
+RewriteRule ^move/up/W([A-Y]*)/([A-Y])$ check/R/W$1/$2 [DPI,N]
+RewriteRule ^move/up/X([A-Y]*)/([A-Y])$ check/S/X$1/$2 [DPI,N]
+RewriteRule ^move/up/Y([A-Y]*)/([A-Y])$ check/T/Y$1/$2 [DPI,N]
+
+RewriteRule ^move/down/A([A-Y]*)/([A-Y])$ check/F/A$1/$2 [DPI,N]
+RewriteRule ^move/down/B([A-Y]*)/([A-Y])$ check/G/B$1/$2 [DPI,N]
+RewriteRule ^move/down/C([A-Y]*)/([A-Y])$ check/H/C$1/$2 [DPI,N]
+RewriteRule ^move/down/D([A-Y]*)/([A-Y])$ check/I/D$1/$2 [DPI,N]
+RewriteRule ^move/down/E([A-Y]*)/([A-Y])$ check/J/E$1/$2 [DPI,N]
+RewriteRule ^move/down/F([A-Y]*)/([A-Y])$ check/K/F$1/$2 [DPI,N]
+RewriteRule ^move/down/G([A-Y]*)/([A-Y])$ check/L/G$1/$2 [DPI,N]
+RewriteRule ^move/down/H([A-Y]*)/([A-Y])$ check/M/H$1/$2 [DPI,N]
+RewriteRule ^move/down/I([A-Y]*)/([A-Y])$ check/N/I$1/$2 [DPI,N]
+RewriteRule ^move/down/J([A-Y]*)/([A-Y])$ check/O/J$1/$2 [DPI,N]
+RewriteRule ^move/down/K([A-Y]*)/([A-Y])$ check/P/K$1/$2 [DPI,N]
+RewriteRule ^move/down/L([A-Y]*)/([A-Y])$ check/Q/L$1/$2 [DPI,N]
+RewriteRule ^move/down/M([A-Y]*)/([A-Y])$ check/R/M$1/$2 [DPI,N]
+RewriteRule ^move/down/N([A-Y]*)/([A-Y])$ check/S/N$1/$2 [DPI,N]
+RewriteRule ^move/down/O([A-Y]*)/([A-Y])$ check/T/O$1/$2 [DPI,N]
+RewriteRule ^move/down/P([A-Y]*)/([A-Y])$ check/U/P$1/$2 [DPI,N]
+RewriteRule ^move/down/Q([A-Y]*)/([A-Y])$ check/V/Q$1/$2 [DPI,N]
+RewriteRule ^move/down/R([A-Y]*)/([A-Y])$ check/W/R$1/$2 [DPI,N]
+RewriteRule ^move/down/S([A-Y]*)/([A-Y])$ check/X/S$1/$2 [DPI,N]
+RewriteRule ^move/down/T([A-Y]*)/([A-Y])$ check/Y/T$1/$2 [DPI,N]
+
+RewriteRule ^move/left/B([A-Y]*)/([A-Y])$ check/A/B$1/$2 [DPI,N]
+RewriteRule ^move/left/C([A-Y]*)/([A-Y])$ check/B/C$1/$2 [DPI,N]
+RewriteRule ^move/left/D([A-Y]*)/([A-Y])$ check/C/D$1/$2 [DPI,N]
+RewriteRule ^move/left/E([A-Y]*)/([A-Y])$ check/D/E$1/$2 [DPI,N]
+RewriteRule ^move/left/G([A-Y]*)/([A-Y])$ check/F/G$1/$2 [DPI,N]
+RewriteRule ^move/left/H([A-Y]*)/([A-Y])$ check/G/H$1/$2 [DPI,N]
+RewriteRule ^move/left/I([A-Y]*)/([A-Y])$ check/H/I$1/$2 [DPI,N]
+RewriteRule ^move/left/J([A-Y]*)/([A-Y])$ check/I/J$1/$2 [DPI,N]
+RewriteRule ^move/left/L([A-Y]*)/([A-Y])$ check/K/L$1/$2 [DPI,N]
+RewriteRule ^move/left/M([A-Y]*)/([A-Y])$ check/L/M$1/$2 [DPI,N]
+RewriteRule ^move/left/N([A-Y]*)/([A-Y])$ check/M/N$1/$2 [DPI,N]
+RewriteRule ^move/left/O([A-Y]*)/([A-Y])$ check/N/O$1/$2 [DPI,N]
+RewriteRule ^move/left/Q([A-Y]*)/([A-Y])$ check/P/Q$1/$2 [DPI,N]
+RewriteRule ^move/left/R([A-Y]*)/([A-Y])$ check/Q/R$1/$2 [DPI,N]
+RewriteRule ^move/left/S([A-Y]*)/([A-Y])$ check/R/S$1/$2 [DPI,N]
+RewriteRule ^move/left/T([A-Y]*)/([A-Y])$ check/S/T$1/$2 [DPI,N]
+RewriteRule ^move/left/V([A-Y]*)/([A-Y])$ check/U/V$1/$2 [DPI,N]
+RewriteRule ^move/left/W([A-Y]*)/([A-Y])$ check/V/W$1/$2 [DPI,N]
+RewriteRule ^move/left/X([A-Y]*)/([A-Y])$ check/W/X$1/$2 [DPI,N]
+RewriteRule ^move/left/Y([A-Y]*)/([A-Y])$ check/X/Y$1/$2 [DPI,N]
+
+RewriteRule ^move/right/A([A-Y]*)/([A-Y])$ check/B/A$1/$2 [DPI,N]
+RewriteRule ^move/right/B([A-Y]*)/([A-Y])$ check/C/B$1/$2 [DPI,N]
+RewriteRule ^move/right/C([A-Y]*)/([A-Y])$ check/D/C$1/$2 [DPI,N]
+RewriteRule ^move/right/D([A-Y]*)/([A-Y])$ check/E/D$1/$2 [DPI,N]
+RewriteRule ^move/right/F([A-Y]*)/([A-Y])$ check/G/F$1/$2 [DPI,N]
+RewriteRule ^move/right/G([A-Y]*)/([A-Y])$ check/H/G$1/$2 [DPI,N]
+RewriteRule ^move/right/H([A-Y]*)/([A-Y])$ check/I/H$1/$2 [DPI,N]
+RewriteRule ^move/right/I([A-Y]*)/([A-Y])$ check/J/I$1/$2 [DPI,N]
+RewriteRule ^move/right/K([A-Y]*)/([A-Y])$ check/L/K$1/$2 [DPI,N]
+RewriteRule ^move/right/L([A-Y]*)/([A-Y])$ check/M/L$1/$2 [DPI,N]
+RewriteRule ^move/right/M([A-Y]*)/([A-Y])$ check/N/M$1/$2 [DPI,N]
+RewriteRule ^move/right/N([A-Y]*)/([A-Y])$ check/O/N$1/$2 [DPI,N]
+RewriteRule ^move/right/P([A-Y]*)/([A-Y])$ check/Q/P$1/$2 [DPI,N]
+RewriteRule ^move/right/Q([A-Y]*)/([A-Y])$ check/R/Q$1/$2 [DPI,N]
+RewriteRule ^move/right/R([A-Y]*)/([A-Y])$ check/S/R$1/$2 [DPI,N]
+RewriteRule ^move/right/S([A-Y]*)/([A-Y])$ check/T/S$1/$2 [DPI,N]
+RewriteRule ^move/right/U([A-Y]*)/([A-Y])$ check/V/U$1/$2 [DPI,N]
+RewriteRule ^move/right/V([A-Y]*)/([A-Y])$ check/W/V$1/$2 [DPI,N]
+RewriteRule ^move/right/W([A-Y]*)/([A-Y])$ check/X/W$1/$2 [DPI,N]
+RewriteRule ^move/right/X([A-Y]*)/([A-Y])$ check/Y/X$1/$2 [DPI,N]
+
+RewriteCond %{REQUEST_URI} ^(.*)/(?:move|check|test|food|next)/
+RewriteRule ^move/(up|down|left|right)/[A-Y]+/[A-Y]$ %1/s/dead/0 [R=302,END]
+
+RewriteRule ^check/([A-Y])/([A-Y]*)/\1$ test/$1/$2/G [DPI,N]
+RewriteRule ^check/([A-Y])/([A-Y]*)([A-Y])/([A-Y])$ test/$1/$2/N/$4 [DPI,N]
+
+RewriteCond %{REQUEST_URI} ^(.*)/(?:move|check|test|food|next)/
+RewriteRule ^test/([A-Y])/([A-Y]*\1[A-Y]*)/(G|N)(/[A-Y])?$ %1/s/dead/0 [R=302,END]
+
+RewriteCond %{REQUEST_URI} ^(.*)/(?:move|check|test|food|next)/
+RewriteRule ^test/([A-Y])/([A-Y]*)/N/([A-Y])$ %1/s/$1$2/$3 [R=302,END]
+
+RewriteCond %{TIME_SEC} 0$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/A/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 1$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/C/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 2$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/F/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 3$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/H/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 4$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/K/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 5$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/M/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 6$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/P/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 7$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/R/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 8$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/U/$1$2 [DPI,N]
+RewriteCond %{TIME_SEC} 9$
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/W/$1$2 [DPI,N]
+
+RewriteRule ^test/([A-Y])/([A-Y]*)/G$ food/T/$1$2 [DPI,N]
+
+RewriteCond %{REQUEST_URI} ^(.*)/(?:move|check|test|food|next)/
+RewriteRule ^food/[A-Y]/[A-Y]{25}$ %1/s/win/0 [R=302,END]
+
+RewriteRule ^food/([A-Y])/([A-Y]*\1[A-Y]*)$ next/$1/$2 [DPI,N]
+
+RewriteCond %{REQUEST_URI} ^(.*)/(?:move|check|test|food|next)/
+RewriteRule ^food/([A-Y])/([A-Y]*)$ %1/s/$2/$1 [R=302,END]
+
+RewriteRule ^next/A/([A-Y]+)$ food/H/$1 [DPI,N]
+RewriteRule ^next/B/([A-Y]+)$ food/I/$1 [DPI,N]
+RewriteRule ^next/C/([A-Y]+)$ food/J/$1 [DPI,N]
+RewriteRule ^next/D/([A-Y]+)$ food/K/$1 [DPI,N]
+RewriteRule ^next/E/([A-Y]+)$ food/L/$1 [DPI,N]
+RewriteRule ^next/F/([A-Y]+)$ food/M/$1 [DPI,N]
+RewriteRule ^next/G/([A-Y]+)$ food/N/$1 [DPI,N]
+RewriteRule ^next/H/([A-Y]+)$ food/O/$1 [DPI,N]
+RewriteRule ^next/I/([A-Y]+)$ food/P/$1 [DPI,N]
+RewriteRule ^next/J/([A-Y]+)$ food/Q/$1 [DPI,N]
+RewriteRule ^next/K/([A-Y]+)$ food/R/$1 [DPI,N]
+RewriteRule ^next/L/([A-Y]+)$ food/S/$1 [DPI,N]
+RewriteRule ^next/M/([A-Y]+)$ food/T/$1 [DPI,N]
+RewriteRule ^next/N/([A-Y]+)$ food/U/$1 [DPI,N]
+RewriteRule ^next/O/([A-Y]+)$ food/V/$1 [DPI,N]
+RewriteRule ^next/P/([A-Y]+)$ food/W/$1 [DPI,N]
+RewriteRule ^next/Q/([A-Y]+)$ food/X/$1 [DPI,N]
+RewriteRule ^next/R/([A-Y]+)$ food/Y/$1 [DPI,N]
+RewriteRule ^next/S/([A-Y]+)$ food/A/$1 [DPI,N]
+RewriteRule ^next/T/([A-Y]+)$ food/B/$1 [DPI,N]
+RewriteRule ^next/U/([A-Y]+)$ food/C/$1 [DPI,N]
+RewriteRule ^next/V/([A-Y]+)$ food/D/$1 [DPI,N]
+RewriteRule ^next/W/([A-Y]+)$ food/E/$1 [DPI,N]
+RewriteRule ^next/X/([A-Y]+)$ food/F/$1 [DPI,N]
+RewriteRule ^next/Y/([A-Y]+)$ food/G/$1 [DPI,N]
+
+RewriteRule ^s/([A-Y]+)/([A-Y])$ index.html [END]
+RewriteRule ^s/(dead|win)/0$ index.html [END]
+
+RewriteRule ^(check|test|food|next)/ - [F,END]

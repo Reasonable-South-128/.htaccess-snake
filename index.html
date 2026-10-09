@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>.htaccess Snake</title>
+<style>
+  body { background:#111; color:#eee; text-align:center; font:18px monospace; margin:35px auto; }
+  h1 { font-size:24px; }
+  #board { display:grid; grid-template-columns:repeat(5,52px); gap:3px; width:max-content; margin:25px auto; }
+  .cell { width:52px; height:52px; background:#292929; }
+  .head { background:#b5ff80; }
+  .body { background:#52a83c; }
+  .food { background:#ee5353; border-radius:40%; }
+  #controls { width:220px; margin:10px auto; display:grid; grid-template-columns:repeat(3,1fr); gap:5px; }
+  button { padding:12px; font:inherit; cursor:pointer; background:#333; color:white; border:1px solid #555; }
+  #restart { margin-top:12px; }
+</style>
+</head>
+<body>
+<h1>SNAKE IN .HTACCESS</h1>
+<p id="status"></p>
+<div id="board"></div>
+<div id="controls">
+  <span></span><button data-dir="up">↑</button><span></span>
+  <button data-dir="left">←</button><button data-dir="down">↓</button><button data-dir="right">→</button>
+</div>
+<button id="restart">Restart</button>
+<script>
+const cells = Array.from({length:25}, () => {
+  const el = document.createElement('div'); el.className = 'cell';
+  document.querySelector('#board').append(el); return el;
+});
+const statePattern = /^(.*\/)s\/([A-Y]+|dead|win)\/([A-Y]|0)\/?$/;
+const initial = location.pathname.match(statePattern);
+const base = initial ? initial[1] : new URL('.', location.href).pathname;
+let body = initial ? initial[2] : 'MLK';
+let food = initial ? initial[3] : 'T';
+let busy = false, ended = false, direction = 'right';
+function draw() {
+  ended = body === 'dead' || body === 'win';
+  cells.forEach((el,i) => {
+    const c = String.fromCharCode(65+i);
+    el.className = 'cell' + (body[0] === c ? ' head' :
+      body.includes(c) ? ' body' : food === c ? ' food' : '');
+  });
+  document.querySelector('#status').textContent = ended
+    ? (body === 'win' ? 'YOU WIN!' : 'GAME OVER')
+    : 'Length: ' + body.length + ' | Arrow keys / WASD';
+}
+async function move(dir) {
+  if (busy || ended) return;
+  busy = true;
+  try {
+    const response = await fetch(base + 'move/' + dir + '/' + body + '/' + food,
+      {cache:'no-store'});
+    if (!response.ok) throw new Error('HTTP ' + response.status);
+    const next = new URL(response.url).pathname.match(statePattern);
+    if (!next || next[1] !== base) throw new Error('Invalid server game state');
+    body = next[2];
+    food = next[3];
+    history.replaceState(null, '', response.url);
+    draw();
+  } catch (e) { ended = true; document.querySelector('#status').textContent = 'Server error: ' + e.message; }
+  finally { busy = false; }
+}
+document.addEventListener('keydown', e => {
+  const dir = {ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right',
+    w:'up',s:'down',a:'left',d:'right'}[e.key];
+  if (dir) {e.preventDefault(); direction = dir;}
+});
+document.querySelectorAll('[data-dir]').forEach(b => b.onclick = () => { direction = b.dataset.dir; });
+document.querySelector('#restart').onclick = () => location.href = base + 's/MLK/T';
+draw();
+setInterval(() => move(direction), 400);
+</script>
+</body>
+</html>
